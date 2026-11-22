@@ -11,7 +11,7 @@
     en: {
       page_title: "qq136692547-cmyk | Open-Source Hub & Antigravity AI Studio",
       meta_description:
-        "Official open-source hub for qq136692547-cmyk: 12 original projects across Antigravity AI & Gemini plugins, local-first developer tools, AI Search (GEO), and commerce analytics.",
+        "Official open-source hub for qq136692547-cmyk: 11 original projects across Antigravity AI & Gemini plugins, local-first developer tools, AI Search (GEO), and commerce analytics.",
       lang_toggle_text: "中文",
       lang_toggle_aria: "切换为中文",
       skip_link: "Skip to projects",
@@ -19,7 +19,7 @@
       brand_subtitle: "Open-Source Lab",
       nav_aria: "Primary navigation",
       nav_flagship: "Flagship",
-      nav_projects: "Projects (12)",
+      nav_projects: "Projects (11)",
       nav_support: "Support",
       nav_github: "GitHub",
       theme_to_dark: "Switch to dark theme",
@@ -27,14 +27,14 @@
       hero_eyebrow: "Independent Open-Source Engineering",
       hero_title: "Pragmatic AI Plugins, Local-First Tools & Web Utilities",
       hero_lead:
-        "A curated catalog of 12 real, source-available projects built for developers, AI workflow engineers, and online operators -- zero telemetry bloat, transparent architecture, and production-tested workflows.",
+        "A curated catalog of 11 real, source-available projects built for developers, AI workflow engineers, and online operators -- zero telemetry bloat, transparent architecture, and production-tested workflows.",
       hero_stats_aria: "Portfolio summary",
       stat_repos: "Repositories",
       stat_stars: "GitHub Stars",
       stat_domains: "Domains",
       stat_tests: "Flagship Tests",
       hero_cta_primary: "Explore Antigravity AI Studio",
-      hero_cta_secondary: "Browse All 12 Projects",
+      hero_cta_secondary: "Browse All 11 Projects",
       spotlight_img_alt:
         "Hand-drawn technical showcase banner for Antigravity AI Studio v0.2.0 Pure Gemini 4 cloud offloading architecture",
       spotlight_badges_aria: "Flagship highlights",
@@ -48,11 +48,11 @@
       spotlight_repo_btn: "View on GitHub",
       spotlight_docs_btn: "Read Documentation",
       catalog_eyebrow: "Full Repository Index",
-      catalog_title: "All 12 Open-Source Projects",
+      catalog_title: "All 11 Open-Source Projects",
       search_label: "Search projects by name, stack, or keyword",
       search_placeholder: "Filter by keyword, stack, or tool...",
       filter_bar_aria: "Filter projects by category",
-      filter_all: "All (12)",
+      filter_all: "All (11)",
       filter_ai: "AI & Gemini Plugins",
       filter_dev: "Local-First Tools",
       filter_geo: "AI Search (GEO)",
@@ -66,7 +66,7 @@
       action_source: "GitHub ->",
       action_live_site: "Live Site",
       action_live_demo: "Live Demo",
-      action_companion_app: "Companion App",
+      action_chrome_ext: "Chrome Ext",
       card_01_sub: "Pure Gemini 4 Cloud Offloading Plugin",
       card_01_desc:
         "Cloud offloading and workflow automation for Google AI Studio via Antigravity browser subagent. Preserve local IDE quota with Pure Gemini 4 (1M context, Thinking High+).",
@@ -95,14 +95,10 @@
       card_07_desc:
         "Free client-side developer tools (UUID, Base64, JSON, JWT, hashes, regex, cron, timezone and 13 more) with zero tracking.",
       card_07_note: "21 Web Utilities",
-      card_08_sub: "Generative Engine Optimization Auditor",
+      card_08_sub: "GEO Audit Suite, Chrome Extension & Playbook",
       card_08_desc:
-        "Generative Engine Optimization (GEO) audit tool for measuring and improving AI search visibility.",
-      card_08_note: "GEO Diagnostics",
-      card_09_sub: "Open GEO Strategy & Audit Playbook",
-      card_09_desc:
-        "Comprehensive open-source handbook to Generative Engine Optimization (GEO) strategies and audits.",
-      card_09_note: "Open Playbook",
+        "All-in-one GEO/AEO audit platform (11 dimensions, 85 checks) with Chrome Extension v1.9, CLI, MCP server, and open GEO handbook.",
+      card_08_note: "v1.9 · 85 Checks",
       card_10_sub: "TikTok Shop Seller Fee & Profit Suite",
       card_10_desc:
         "Free TikTok Shop seller suite featuring fee calculator, profit calculator, and Amazon vs TikTok Shop comparison.",
@@ -135,7 +131,7 @@
     zh: {
       page_title: "qq136692547-cmyk | 开源导航官网 & Antigravity AI Studio",
       meta_description:
-        "qq136692547-cmyk 官方开源项目导航：涵盖 Antigravity AI 与 Gemini 插件、本地优先开发者工具、AI 搜索 (GEO) 与跨境电商/金融分析等 12 个原创开源项目。",
+        "qq136692547-cmyk 官方开源项目导航：涵盖 Antigravity AI 与 Gemini 插件、本地优先开发者工具、AI 搜索 (GEO) 与跨境电商/金融分析等 11 个原创开源项目。",
       lang_toggle_text: "EN",
       lang_toggle_aria: "Switch to English",
       skip_link: "跳过导航直达项目",
@@ -151,14 +147,14 @@
       hero_eyebrow: "独立开源工程实验室",
       hero_title: "务实的 AI 插件、本地优先工具与 Web 效率套件",
       hero_lead:
-        "精选 12 个真实开源项目，面向开发者、AI 工作流工程师与跨境电商/运营人员打造——零遥测冗余、架构透明、经过生产级实测验证。",
+        "精选 11 个真实开源项目，面向开发者、AI 工作流工程师与跨境电商/运营人员打造——零遥测冗余、架构透明、经过生产级实测验证。",
       hero_stats_aria: "开源项目核心指标",
       stat_repos: "开源仓库",
       stat_stars: "GitHub Stars",
       stat_domains: "技术领域",
       stat_tests: "旗舰测试通过率",
       hero_cta_primary: "探索 Antigravity AI Studio",
-      hero_cta_secondary: "浏览全部 12 个项目",
+      hero_cta_secondary: "浏览全部 11 个项目",
       spotlight_img_alt:
         "Antigravity AI Studio v0.2.0 Pure Gemini 4 云端卸载架构手绘技术展示横幅",
       spotlight_badges_aria: "旗舰项目亮点",
@@ -172,11 +168,11 @@
       spotlight_repo_btn: "查看 GitHub 仓库",
       spotlight_docs_btn: "阅读项目文档",
       catalog_eyebrow: "完整开源项目索引",
-      catalog_title: "全部 12 个开源项目",
+      catalog_title: "全部 11 个开源项目",
       search_label: "按名称、技术栈或功能关键词搜索项目",
       search_placeholder: "按名称、技术栈或功能搜索项目...",
       filter_bar_aria: "按技术领域筛选项目",
-      filter_all: "全部 (12)",
+      filter_all: "全部 (11)",
       filter_ai: "AI 与 Gemini 插件",
       filter_dev: "本地优先工具",
       filter_geo: "AI 搜索 (GEO)",
@@ -190,7 +186,7 @@
       action_source: "查看源码 ->",
       action_live_site: "在线体验",
       action_live_demo: "在线体验",
-      action_companion_app: "在线体验",
+      action_chrome_ext: "Chrome 扩展",
       card_01_sub: "Google AI Studio 云端推理卸载插件",
       card_01_desc:
         "通过 Antigravity 内置浏览器子智能体，将重度推理与百万字文档分析卸载至 Google AI Studio 纯 Gemini 4（1M 上下文，Thinking High+），零消耗本地 IDE 配额。",
@@ -219,14 +215,10 @@
       card_07_desc:
         "免费纯前端在线开发者工具箱（UUID、Base64、JSON、JWT、哈希、正则、Cron、时区等 20+ 工具），零追踪完全开源。",
       card_07_note: "21 款在线工具",
-      card_08_sub: "生成式引擎优化 (GEO) 诊断工具",
+      card_08_sub: "GEO 智能诊断套件、Chrome 扩展与实战手册",
       card_08_desc:
-        "生成式引擎优化（GEO）诊断工具，用于量化评估并提升网站在 AI 搜索引擎中的可见度与引用率。",
-      card_08_note: "GEO 智能诊断",
-      card_09_sub: "GEO 优化策略与审计实战手册",
-      card_09_desc:
-        "系统全面的生成式引擎优化（GEO）开源实战手册，涵盖策略框架与审计清单。",
-      card_09_note: "开源实战手册",
+        "一站式生成式引擎优化（GEO/AEO）审计平台（11 维度 85 项检测），集成 Chrome 扩展 v1.9、终端 CLI、MCP 服务与开源实战手册。",
+      card_08_note: "v1.9 · 85 项检测",
       card_10_sub: "TikTok Shop 卖家费用与利润测算",
       card_10_desc:
         "免费 TikTok Shop 卖家工具集，包含佣金/费用计算器、利润测算及 Amazon 与 TikTok Shop 对比分析。",
