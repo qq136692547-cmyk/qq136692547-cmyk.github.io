@@ -27,7 +27,7 @@
   --shadow-card: light-dark(0 1px 3px rgba(24, 30, 42, 0.06), 0 4px 16px rgba(2, 6, 23, 0.45));
   --shadow-card-hover: light-dark(0 14px 28px rgba(24, 30, 42, 0.12), 0 16px 32px rgba(2, 6, 23, 0.65));
 
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   --radius-sm: 0.45rem;
@@ -179,6 +179,38 @@ code {
 .header-nav a:hover,
 .header-nav a:focus-visible {
   color: var(--accent-cobalt);
+}
+
+/* Language & Theme Toggle */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.65rem;
+  height: 2.35rem;
+  padding: 0 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.lang-toggle:hover {
+  border-color: var(--accent-cobalt);
+  background-color: var(--bg-surface-alt);
+  color: var(--accent-cobalt);
+}
+
+.lang-toggle:focus-visible {
+  outline: 2px solid var(--accent-cobalt);
+  outline-offset: 2px;
 }
 
 /* Theme Toggle (CSS-driven state visibility) */
@@ -424,6 +456,13 @@ code {
 .spotlight-body p {
   margin: 0 0 1.1rem;
   font-size: 0.94rem;
+  color: var(--text-secondary);
+}
+
+.spotlight-body .install-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   color: var(--text-secondary);
 }
 
@@ -686,6 +725,14 @@ code {
   letter-spacing: -0.01em;
 }
 
+.card-subtitle {
+  margin: -0.35rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-secondary);
+}
+
 .card-link {
   color: inherit;
   text-decoration: none;
@@ -888,8 +935,30 @@ code {
 }
 
 @media (max-width: 600px) {
+  .header-nav {
+    gap: 0.55rem;
+  }
+
+  .header-nav a {
+    white-space: nowrap;
+  }
+
   .header-nav a:not(:last-of-type) {
     display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    width: min(76rem, 100% - 1.5rem);
+  }
+
+  .brand-text strong {
+    font-size: 0.9rem;
+  }
+
+  .header-nav a {
+    font-size: 0.84rem;
   }
 }
 
@@ -901,6 +970,7 @@ code {
   .card,
   .btn,
   .filter-btn,
+  .lang-toggle,
   .theme-toggle,
   .header-nav a,
   .demo-link {

@@ -9,6 +9,18 @@
       document.querySelector('meta[name="color-scheme"]').content = localStorage.getItem("color-scheme") ?? "light dark";
     } catch {}
   </script>
+  <script>
+    try {
+      var langParam = new URLSearchParams(window.location.search).get("lang");
+      var savedLang = localStorage.getItem("site-lang");
+      var navLang = (navigator.language || "").toLowerCase();
+      var initialLang = (langParam === "zh" || langParam === "en")
+        ? langParam
+        : ((savedLang === "zh" || savedLang === "en") ? savedLang : (navLang.startsWith("zh") ? "zh" : "en"));
+      document.documentElement.lang = initialLang === "zh" ? "zh-CN" : "en";
+      document.documentElement.dataset.lang = initialLang;
+    } catch {}
+  </script>
   <title>qq136692547-cmyk | Open-Source Hub &amp; Antigravity AI Studio</title>
   <meta name="description" content="Official open-source hub for qq136692547-cmyk: 12 original projects across Antigravity AI &amp; Gemini plugins, local-first developer tools, AI Search (GEO), and commerce analytics.">
   <meta name="author" content="qq136692547-cmyk">
@@ -26,11 +38,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#projects">Skip to projects</a>
+  <a class="skip-link" href="#projects" data-i18n="skip_link">Skip to projects</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="qq136692547-cmyk Open-Source Hub home">
+      <a class="brand" href="#top" data-i18n-aria-label="brand_aria" aria-label="qq136692547-cmyk Open-Source Hub home">
         <span class="brand-mark" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 3l8 16H4L12 3z"/>
@@ -39,28 +51,29 @@
         </span>
         <span class="brand-text">
           <strong>qq136692547-cmyk</strong>
-          <span>Open-Source Hub</span>
+          <span data-i18n="brand_subtitle">Open-Source Lab</span>
         </span>
       </a>
 
-      <nav class="header-nav" aria-label="Primary navigation">
-        <a href="#spotlight">Flagship</a>
-        <a href="#projects">Projects (12)</a>
-        <a href="#support">Support</a>
-        <a href="https://github.com/qq136692547-cmyk" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <nav class="header-nav" data-i18n-aria-label="nav_aria" aria-label="Primary navigation">
+        <a href="#spotlight" data-i18n="nav_flagship">Flagship</a>
+        <a href="#projects" data-i18n="nav_projects">Projects (12)</a>
+        <a href="#support" data-i18n="nav_support">Support</a>
+        <a href="https://github.com/qq136692547-cmyk" target="_blank" rel="noopener noreferrer" data-i18n="nav_github">GitHub</a>
+        <button type="button" id="lang-toggle" class="lang-toggle" aria-label="切换为中文">中文</button>
         <button type="button" id="theme-toggle" class="theme-toggle">
           <span class="theme-icon-to-dark">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
             </svg>
-            <span class="sr-only">Switch to dark theme</span>
+            <span class="sr-only" data-i18n="theme_to_dark">Switch to dark theme</span>
           </span>
           <span class="theme-icon-to-light">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="4"/>
               <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
             </svg>
-            <span class="sr-only">Switch to light theme</span>
+            <span class="sr-only" data-i18n="theme_to_light">Switch to light theme</span>
           </span>
         </button>
       </nav>
@@ -71,34 +84,34 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Independent Open-Source Engineering</p>
-          <h1 id="hero-title">Pragmatic AI Plugins, Local-First Tools &amp; Web Utilities</h1>
-          <p class="hero-lead">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Independent Open-Source Engineering</p>
+          <h1 id="hero-title" data-i18n="hero_title">Pragmatic AI Plugins, Local-First Tools &amp; Web Utilities</h1>
+          <p class="hero-lead" data-i18n="hero_lead">
             A curated catalog of 12 real, source-available projects built for developers, AI workflow engineers, and online operators -- zero telemetry bloat, transparent architecture, and production-tested workflows.
           </p>
 
-          <dl class="hero-stats" aria-label="Portfolio summary">
+          <dl class="hero-stats" data-i18n-aria-label="hero_stats_aria" aria-label="Portfolio summary">
             <div class="stat-item">
-              <dt>Repositories</dt>
+              <dt data-i18n="stat_repos">Repositories</dt>
               <dd>12</dd>
             </div>
             <div class="stat-item">
-              <dt>GitHub Stars</dt>
+              <dt data-i18n="stat_stars">GitHub Stars</dt>
               <dd id="total-stars">3</dd>
             </div>
             <div class="stat-item">
-              <dt>Domains</dt>
+              <dt data-i18n="stat_domains">Domains</dt>
               <dd>4</dd>
             </div>
             <div class="stat-item">
-              <dt>Flagship Tests</dt>
+              <dt data-i18n="stat_tests">Flagship Tests</dt>
               <dd>255 / 255</dd>
             </div>
           </dl>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#spotlight">Explore Antigravity AI Studio</a>
-            <a class="btn btn-secondary" href="#projects">Browse All 12 Projects</a>
+            <a class="btn btn-primary" href="#spotlight" data-i18n="hero_cta_primary">Explore Antigravity AI Studio</a>
+            <a class="btn btn-secondary" href="#projects" data-i18n="hero_cta_secondary">Browse All 12 Projects</a>
           </div>
         </div>
 
@@ -106,6 +119,7 @@
           <div class="spotlight-media">
             <img
               src="https://raw.githubusercontent.com/qq136692547-cmyk/antigravity-aistudio/main/assets/hero-banner.png"
+              data-i18n-alt="spotlight_img_alt"
               alt="Hand-drawn technical showcase banner for Antigravity AI Studio v0.2.0 Pure Gemini 4 cloud offloading architecture"
               width="1376"
               height="768"
@@ -114,30 +128,32 @@
             >
           </div>
           <div class="spotlight-body">
-            <div class="spotlight-badges" aria-label="Flagship highlights">
+            <div class="spotlight-badges" data-i18n-aria-label="spotlight_badges_aria" aria-label="Flagship highlights">
               <span class="badge badge-cobalt">v0.2.0</span>
               <span class="badge badge-purple">Pure Gemini 4</span>
-              <span class="badge badge-teal">1M Context</span>
+              <span class="badge badge-teal" data-i18n="badge_context">1M Context</span>
               <span class="badge badge-amber">Thinking High+</span>
-              <span class="badge badge-neutral">255/255 Tests</span>
+              <span class="badge badge-neutral" data-i18n="badge_tests">255/255 Tests</span>
             </div>
             <h2 id="spotlight-title">antigravity-aistudio</h2>
-            <p>
+            <p data-i18n-html="spotlight_desc">
               Cloud offloading and workflow automation for Google AI Studio via Antigravity's built-in browser subagent. Preserve 100% of your local IDE quota with Pure Gemini 4 (<code>Hydrogen</code>, <code>Argon</code>, <code>Neon</code>, <code>Carbon</code>), enforced <code>Thinking level &gt;= High</code>, and zero local daemons.
             </p>
+            <p class="install-label" data-i18n="spotlight_install_label">One-click install for Antigravity</p>
             <div class="install-bar">
               <code id="install-cmd">agy plugin install https://github.com/qq136692547-cmyk/antigravity-aistudio</code>
               <button
                 type="button"
                 class="copy-btn"
                 data-copy-target="install-cmd"
-                data-default-label="Copy"
+                data-i18n="copy_cmd_btn"
+                data-i18n-aria-label="copy_cmd_aria"
                 aria-label="Copy Antigravity AI Studio install command"
               >Copy</button>
             </div>
             <div class="spotlight-links">
-              <a class="btn btn-primary" href="https://github.com/qq136692547-cmyk/antigravity-aistudio" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-              <a class="btn btn-secondary" href="https://github.com/qq136692547-cmyk/antigravity-aistudio#readme" target="_blank" rel="noopener noreferrer">Read Documentation</a>
+              <a class="btn btn-primary" href="https://github.com/qq136692547-cmyk/antigravity-aistudio" target="_blank" rel="noopener noreferrer" data-i18n="spotlight_repo_btn">View on GitHub</a>
+              <a class="btn btn-secondary" href="https://github.com/qq136692547-cmyk/antigravity-aistudio#readme" target="_blank" rel="noopener noreferrer" data-i18n="spotlight_docs_btn">Read Documentation</a>
             </div>
           </div>
         </aside>
@@ -148,15 +164,16 @@
       <div class="container">
         <div class="catalog-header">
           <div>
-            <p class="eyebrow">Full Repository Index</p>
-            <h2 id="catalog-title">All 12 Open-Source Projects</h2>
+            <p class="eyebrow" data-i18n="catalog_eyebrow">Full Repository Index</p>
+            <h2 id="catalog-title" data-i18n="catalog_title">All 12 Open-Source Projects</h2>
           </div>
           <div class="search-wrap">
-            <label for="project-search" class="sr-only">Search projects by name, stack, or keyword</label>
+            <label for="project-search" class="sr-only" data-i18n="search_label">Search projects by name, stack, or keyword</label>
             <input
               type="search"
               id="project-search"
               class="search-input"
+              data-i18n-placeholder="search_placeholder"
               placeholder="Filter by keyword, stack, or tool..."
               autocomplete="off"
               spellcheck="false"
@@ -164,25 +181,25 @@
           </div>
         </div>
 
-        <div class="filter-bar" role="group" aria-label="Filter projects by category">
-          <button type="button" class="filter-btn" data-category="all" aria-pressed="true">All (12)</button>
-          <button type="button" class="filter-btn" data-category="ai-plugins" aria-pressed="false">AI &amp; Gemini Plugins</button>
-          <button type="button" class="filter-btn" data-category="devtools" aria-pressed="false">Local-First Tools</button>
-          <button type="button" class="filter-btn" data-category="geo" aria-pressed="false">AI Search (GEO)</button>
-          <button type="button" class="filter-btn" data-category="commerce" aria-pressed="false">Commerce &amp; Finance</button>
+        <div class="filter-bar" role="group" data-i18n-aria-label="filter_bar_aria" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn" data-category="all" aria-pressed="true" data-i18n="filter_all">All (12)</button>
+          <button type="button" class="filter-btn" data-category="ai-plugins" aria-pressed="false" data-i18n="filter_ai">AI &amp; Gemini Plugins</button>
+          <button type="button" class="filter-btn" data-category="devtools" aria-pressed="false" data-i18n="filter_dev">Local-First Tools</button>
+          <button type="button" class="filter-btn" data-category="geo" aria-pressed="false" data-i18n="filter_geo">AI Search (GEO)</button>
+          <button type="button" class="filter-btn" data-category="commerce" aria-pressed="false" data-i18n="filter_commerce">Commerce &amp; Finance</button>
         </div>
 
         <p id="results-status" class="results-status" aria-live="polite">Showing 12 of 12 open-source projects.</p>
 
         <div id="projects-grid" class="projects-grid">
-          <article class="card card-featured" data-repo="antigravity-aistudio" data-category="ai-plugins" data-search="antigravity-aistudio python ai plugins google ai studio gemini 4 1m context thinking high cloud offload browser subagent">
+          <article class="card card-featured" data-repo="antigravity-aistudio" data-category="ai-plugins" data-search="antigravity-aistudio python ai plugins google ai studio gemini 4 1m context thinking high cloud offload browser subagent 云端卸载 推理 上下文 配额 浏览器 子智能体 调优">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-ai">AI &amp; Gemini Plugins</span>
+                <span class="cat-pill cat-ai" data-i18n="cat_ai">AI &amp; Gemini Plugins</span>
                 <div class="card-meta-right">
-                  <span class="badge-featured">Flagship</span>
+                  <span class="badge-featured" data-i18n="badge_flagship">Flagship</span>
                   <span class="lang-tag">Python</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="antigravity-aistudio">0</span>
                   </span>
@@ -191,25 +208,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/antigravity-aistudio" target="_blank" rel="noopener noreferrer">antigravity-aistudio</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_01_sub">Pure Gemini 4 Cloud Offloading Plugin</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_01_desc">
               Cloud offloading and workflow automation for Google AI Studio via Antigravity browser subagent. Preserve local IDE quota with Pure Gemini 4 (1M context, Thinking High+).
             </p>
             <footer class="card-footer">
-              <span class="footer-note">v0.2.0 &middot; 255/255 Tests</span>
+              <span class="footer-note" data-i18n="card_01_note">v0.2.0 &middot; 255/255 Tests</span>
               <span class="footer-actions">
-                <span class="repo-arrow" aria-hidden="true">GitHub -&gt;</span>
+                <span class="repo-arrow" aria-hidden="true" data-i18n="action_source">GitHub -&gt;</span>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="magpie-gemini-media-tools" data-category="ai-plugins" data-search="magpie-gemini-media-tools javascript mcp plugin magpie nano banana 2.1 gemini files api 3.8 tts">
+          <article class="card" data-repo="magpie-gemini-media-tools" data-category="ai-plugins" data-search="magpie-gemini-media-tools javascript mcp plugin magpie nano banana 2.1 gemini files api 3.8 tts 多模态 生图 语音合成 音频 文件 插件">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-ai">AI &amp; Gemini Plugins</span>
+                <span class="cat-pill cat-ai" data-i18n="cat_ai">AI &amp; Gemini Plugins</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">JavaScript</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="magpie-gemini-media-tools">1</span>
                   </span>
@@ -218,25 +236,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/magpie-gemini-media-tools" target="_blank" rel="noopener noreferrer">magpie-gemini-media-tools</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_02_sub">Multimodal MCP Media Plugin</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_02_desc">
               MCP tool plugin for Magpie exposing Nano Banana 2.1, Gemini Files API, and 3.8 TTS.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">MCP Multimodal</span>
+              <span class="footer-note" data-i18n="card_02_note">MCP Multimodal</span>
               <span class="footer-actions">
-                <span class="repo-arrow" aria-hidden="true">GitHub -&gt;</span>
+                <span class="repo-arrow" aria-hidden="true" data-i18n="action_source">GitHub -&gt;</span>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="magpie-google-aistudio" data-category="ai-plugins" data-search="magpie-google-aistudio javascript api key provider plugin magpie opencode workflows">
+          <article class="card" data-repo="magpie-google-aistudio" data-category="ai-plugins" data-search="magpie-google-aistudio javascript api key provider plugin magpie opencode workflows 模型接入 密钥 工作流 插件">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-ai">AI &amp; Gemini Plugins</span>
+                <span class="cat-pill cat-ai" data-i18n="cat_ai">AI &amp; Gemini Plugins</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">JavaScript</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="magpie-google-aistudio">0</span>
                   </span>
@@ -245,25 +264,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/magpie-google-aistudio" target="_blank" rel="noopener noreferrer">magpie-google-aistudio</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_03_sub">Official API-Key Model Provider</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_03_desc">
               Official API-key Google AI Studio provider plugin for Magpie and OpenCode workflows.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">Provider Adapter</span>
+              <span class="footer-note" data-i18n="card_03_note">Provider Adapter</span>
               <span class="footer-actions">
-                <span class="repo-arrow" aria-hidden="true">GitHub -&gt;</span>
+                <span class="repo-arrow" aria-hidden="true" data-i18n="action_source">GitHub -&gt;</span>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="magpie-gemini-search" data-category="ai-plugins" data-search="magpie-gemini-search javascript web search api plugin magpie google gemini search grounding">
+          <article class="card" data-repo="magpie-gemini-search" data-category="ai-plugins" data-search="magpie-gemini-search javascript web search api plugin magpie google gemini search grounding 联网 搜索 实时 检索 插件">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-ai">AI &amp; Gemini Plugins</span>
+                <span class="cat-pill cat-ai" data-i18n="cat_ai">AI &amp; Gemini Plugins</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">JavaScript</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="magpie-gemini-search">0</span>
                   </span>
@@ -272,25 +292,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/magpie-gemini-search" target="_blank" rel="noopener noreferrer">magpie-gemini-search</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_04_sub">Real-Time Search Grounding Plugin</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_04_desc">
               Web search API plugin for Magpie powered by Google Gemini Search Grounding.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">Search Grounding</span>
+              <span class="footer-note" data-i18n="card_04_note">Search Grounding</span>
               <span class="footer-actions">
-                <span class="repo-arrow" aria-hidden="true">GitHub -&gt;</span>
+                <span class="repo-arrow" aria-hidden="true" data-i18n="action_source">GitHub -&gt;</span>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="QuickNote" data-category="devtools" data-search="quicknote rust tauri offline-first ai scratchpad sqlite vault deepseek desktop">
+          <article class="card" data-repo="QuickNote" data-category="devtools" data-search="quicknote rust tauri offline-first ai scratchpad sqlite vault deepseek desktop 便签 笔记 离线 本地 桌面端 数据库">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-dev">Local-First Tools</span>
+                <span class="cat-pill cat-dev" data-i18n="cat_dev">Local-First Tools</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">Rust / Tauri</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="QuickNote">0</span>
                   </span>
@@ -299,25 +320,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/QuickNote" target="_blank" rel="noopener noreferrer">QuickNote</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_05_sub">Offline-First AI Developer Scratchpad</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_05_desc">
               Blazing-fast offline-first AI scratchpad for developers with a 100% local SQLite vault and native DeepSeek integration.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">Desktop Vault</span>
+              <span class="footer-note" data-i18n="card_05_note">Desktop Vault</span>
               <span class="footer-actions">
-                <a class="demo-link" href="https://quicknote-official.pages.dev" target="_blank" rel="noopener noreferrer">Live Site</a>
+                <a class="demo-link" href="https://quicknote-official.pages.dev" target="_blank" rel="noopener noreferrer" data-i18n="action_live_site">Live Site</a>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="bookmark-health-master" data-category="devtools" data-search="bookmark-health-master javascript chrome mv3 extension doh diagnostics clustering atomic undo">
+          <article class="card" data-repo="bookmark-health-master" data-category="devtools" data-search="bookmark-health-master javascript chrome mv3 extension doh diagnostics clustering atomic undo 书签 死链 清理 扩展 浏览器 诊断 聚类 撤销">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-dev">Local-First Tools</span>
+                <span class="cat-pill cat-dev" data-i18n="cat_dev">Local-First Tools</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">JavaScript</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="bookmark-health-master">0</span>
                   </span>
@@ -326,25 +348,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/bookmark-health-master" target="_blank" rel="noopener noreferrer">bookmark-health-master</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_06_sub">Local-First Chrome Bookmark Auditor</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_06_desc">
               100% local-first Chrome MV3 extension eliminating dead bookmarks with Dual-Stage DoH diagnostics, 16 Tech Titans clustering, and atomic undo.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">Chrome MV3</span>
+              <span class="footer-note" data-i18n="card_06_note">Chrome MV3</span>
               <span class="footer-actions">
-                <a class="demo-link" href="https://bhm-pro-ern.pages.dev/" target="_blank" rel="noopener noreferrer">Live Site</a>
+                <a class="demo-link" href="https://bhm-pro-ern.pages.dev/" target="_blank" rel="noopener noreferrer" data-i18n="action_live_site">Live Site</a>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="anan-devtools" data-category="devtools" data-search="anan-devtools html js client-side developer tools uuid base64 json jwt hashes regex cron timezone">
+          <article class="card" data-repo="anan-devtools" data-category="devtools" data-search="anan-devtools html js client-side developer tools uuid base64 json jwt hashes regex cron timezone 开发者工具 工具箱 格式化 编码 哈希 正则 时区">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-dev">Local-First Tools</span>
+                <span class="cat-pill cat-dev" data-i18n="cat_dev">Local-First Tools</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">HTML / JS</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="anan-devtools">0</span>
                   </span>
@@ -353,25 +376,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/anan-devtools" target="_blank" rel="noopener noreferrer">anan-devtools</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_07_sub">Zero-Tracking Client-Side Dev Utilities</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_07_desc">
               Free client-side developer tools (UUID, Base64, JSON, JWT, hashes, regex, cron, timezone and 13 more) with zero tracking.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">21 Web Utilities</span>
+              <span class="footer-note" data-i18n="card_07_note">21 Web Utilities</span>
               <span class="footer-actions">
-                <a class="demo-link" href="https://anan.zh.kg" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a class="demo-link" href="https://anan.zh.kg" target="_blank" rel="noopener noreferrer" data-i18n="action_live_demo">Live Demo</a>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="geo-score" data-category="geo" data-search="geo-score javascript generative engine optimization geo audit tool ai search visibility">
+          <article class="card" data-repo="geo-score" data-category="geo" data-search="geo-score javascript generative engine optimization geo audit tool ai search visibility 生成式引擎优化 ai搜索 诊断 评分 可见度 引用率">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-geo">AI Search (GEO)</span>
+                <span class="cat-pill cat-geo" data-i18n="cat_geo">AI Search (GEO)</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">JavaScript</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="geo-score">1</span>
                   </span>
@@ -380,25 +404,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/geo-score" target="_blank" rel="noopener noreferrer">geo-score</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_08_sub">Generative Engine Optimization Auditor</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_08_desc">
               Generative Engine Optimization (GEO) audit tool for measuring and improving AI search visibility.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">GEO Diagnostics</span>
+              <span class="footer-note" data-i18n="card_08_note">GEO Diagnostics</span>
               <span class="footer-actions">
-                <a class="demo-link" href="https://geoscore.help/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a class="demo-link" href="https://geoscore.help/" target="_blank" rel="noopener noreferrer" data-i18n="action_live_demo">Live Demo</a>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="geo-optimization-handbook" data-category="geo" data-search="geo-optimization-handbook markdown handbook generative engine optimization strategies audits">
+          <article class="card" data-repo="geo-optimization-handbook" data-category="geo" data-search="geo-optimization-handbook markdown handbook generative engine optimization strategies audits 生成式引擎优化 手册 指南 策略 审计清单">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-geo">AI Search (GEO)</span>
+                <span class="cat-pill cat-geo" data-i18n="cat_geo">AI Search (GEO)</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">Markdown</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="geo-optimization-handbook">1</span>
                   </span>
@@ -407,25 +432,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/geo-optimization-handbook" target="_blank" rel="noopener noreferrer">geo-optimization-handbook</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_09_sub">Open GEO Strategy &amp; Audit Playbook</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_09_desc">
               Comprehensive open-source handbook to Generative Engine Optimization (GEO) strategies and audits.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">Open Playbook</span>
+              <span class="footer-note" data-i18n="card_09_note">Open Playbook</span>
               <span class="footer-actions">
-                <a class="demo-link" href="https://geoscore.help/" target="_blank" rel="noopener noreferrer">Companion App</a>
+                <a class="demo-link" href="https://geoscore.help/" target="_blank" rel="noopener noreferrer" data-i18n="action_companion_app">Companion App</a>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="deng-tts-tools" data-category="commerce" data-search="deng-tts-tools html js tiktok shop seller suite fee calculator profit amazon comparison">
+          <article class="card" data-repo="deng-tts-tools" data-category="commerce" data-search="deng-tts-tools html js tiktok shop seller suite fee calculator profit amazon comparison tiktok 跨境电商 卖家 佣金 费用 利润 计算器 亚马逊">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-commerce">Commerce &amp; Finance</span>
+                <span class="cat-pill cat-commerce" data-i18n="cat_commerce">Commerce &amp; Finance</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">HTML / JS</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="deng-tts-tools">0</span>
                   </span>
@@ -434,25 +460,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/deng-tts-tools" target="_blank" rel="noopener noreferrer">deng-tts-tools</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_10_sub">TikTok Shop Seller Fee &amp; Profit Suite</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_10_desc">
               Free TikTok Shop seller suite featuring fee calculator, profit calculator, and Amazon vs TikTok Shop comparison.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">Seller Calculator</span>
+              <span class="footer-note" data-i18n="card_10_note">Seller Calculator</span>
               <span class="footer-actions">
-                <a class="demo-link" href="https://ttcalc.shop/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a class="demo-link" href="https://ttcalc.shop/" target="_blank" rel="noopener noreferrer" data-i18n="action_live_demo">Live Demo</a>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="fbatools-site" data-category="commerce" data-search="fbatools-site html js amazon fba calculator seller tools fee breakdowns profit margins roi">
+          <article class="card" data-repo="fbatools-site" data-category="commerce" data-search="fbatools-site html js amazon fba calculator seller tools fee breakdowns profit margins roi 亚马逊 跨境电商 费用 利润 毛利率 投资回报率 计算器">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-commerce">Commerce &amp; Finance</span>
+                <span class="cat-pill cat-commerce" data-i18n="cat_commerce">Commerce &amp; Finance</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">HTML / JS</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="fbatools-site">0</span>
                   </span>
@@ -461,25 +488,26 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/fbatools-site" target="_blank" rel="noopener noreferrer">fbatools-site</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_11_sub">Amazon FBA Fee &amp; ROI Calculator</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_11_desc">
               Free Amazon FBA calculator and seller tools for fee breakdowns, profit margins, and ROI analysis.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">Margin &amp; ROI</span>
+              <span class="footer-note" data-i18n="card_11_note">Margin &amp; ROI</span>
               <span class="footer-actions">
-                <span class="repo-arrow" aria-hidden="true">GitHub -&gt;</span>
+                <span class="repo-arrow" aria-hidden="true" data-i18n="action_source">GitHub -&gt;</span>
               </span>
             </footer>
           </article>
 
-          <article class="card" data-repo="aikanpan-web" data-category="commerce" data-search="aikanpan-web typescript ai-powered equity market review daily trading analytics web application">
+          <article class="card" data-repo="aikanpan-web" data-category="commerce" data-search="aikanpan-web typescript ai-powered equity market review daily trading analytics web application 爱看盘 a股 股票 复盘 交易分析 金融 量化">
             <header class="card-header">
               <div class="card-top-row">
-                <span class="cat-pill cat-commerce">Commerce &amp; Finance</span>
+                <span class="cat-pill cat-commerce" data-i18n="cat_commerce">Commerce &amp; Finance</span>
                 <div class="card-meta-right">
                   <span class="lang-tag">TypeScript</span>
-                  <span class="star-pill" aria-label="GitHub stars">
+                  <span class="star-pill" data-i18n-aria-label="stars_aria" aria-label="GitHub stars">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
                     <span data-stars-for="aikanpan-web">0</span>
                   </span>
@@ -488,22 +516,23 @@
               <h3>
                 <a class="card-link" href="https://github.com/qq136692547-cmyk/aikanpan-web" target="_blank" rel="noopener noreferrer">aikanpan-web</a>
               </h3>
+              <p class="card-subtitle" data-i18n="card_12_sub">AI Equity Market Review &amp; Analytics</p>
             </header>
-            <p class="card-body">
+            <p class="card-body" data-i18n="card_12_desc">
               AI-powered equity market review and daily trading analytics web application.
             </p>
             <footer class="card-footer">
-              <span class="footer-note">Market Analytics</span>
+              <span class="footer-note" data-i18n="card_12_note">Market Analytics</span>
               <span class="footer-actions">
-                <a class="demo-link" href="https://aikanpan.top" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a class="demo-link" href="https://aikanpan.top" target="_blank" rel="noopener noreferrer" data-i18n="action_live_demo">Live Demo</a>
               </span>
             </footer>
           </article>
         </div>
 
         <div id="empty-state" class="empty-state" hidden>
-          <p>No projects matched your current filter or search query.</p>
-          <button type="button" id="reset-filters" class="btn btn-secondary">Reset Filters</button>
+          <p data-i18n="empty_text">No projects matched your current filter or search query.</p>
+          <button type="button" id="reset-filters" class="btn btn-secondary" data-i18n="empty_reset">Reset Filters</button>
         </div>
       </div>
     </section>
@@ -512,25 +541,26 @@
   <footer id="support" class="site-footer">
     <div class="container footer-grid">
       <div class="footer-about">
-        <h2>Support Open-Source Work</h2>
-        <p>
+        <h2 data-i18n="footer_heading">Support Open-Source Work</h2>
+        <p data-i18n-html="footer_desc">
           Every tool listed here is open source and built without invasive analytics. If <code>antigravity-aistudio</code> or any utility saved you time or quota, consider starring the repository or buying a coffee.
         </p>
         <div class="footer-links">
-          <a href="https://github.com/qq136692547-cmyk" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-          <a href="https://github.com/qq136692547-cmyk/antigravity-aistudio#support--buy-me-a-coffee" target="_blank" rel="noopener noreferrer">antigravity-aistudio Sponsor Section</a>
+          <a href="https://github.com/qq136692547-cmyk" target="_blank" rel="noopener noreferrer" data-i18n="footer_gh_profile">GitHub Profile</a>
+          <a href="https://github.com/qq136692547-cmyk/antigravity-aistudio#support--buy-me-a-coffee" target="_blank" rel="noopener noreferrer" data-i18n="footer_sponsor_link">antigravity-aistudio Sponsor &amp; QR Codes</a>
         </div>
       </div>
 
       <div class="support-box">
-        <p class="support-label">USDT (BNB Smart Chain / BEP-20)</p>
+        <p class="support-label" data-i18n="support_usdt_label">USDT (BNB Smart Chain / BEP-20)</p>
         <div class="wallet-row">
           <code id="usdt-address">0xaCa8773aaA80815811ce1a45d40c86A53e4224ef0</code>
           <button
             type="button"
             class="copy-btn"
             data-copy-target="usdt-address"
-            data-default-label="Copy Address"
+            data-i18n="copy_addr_btn"
+            data-i18n-aria-label="copy_addr_aria"
             aria-label="Copy USDT BNB Smart Chain wallet address"
           >Copy Address</button>
         </div>
@@ -539,7 +569,7 @@
     </div>
 
     <div class="container footer-bottom">
-      <p>&copy; 2026 qq136692547-cmyk. Built with zero dependencies, native CSS <code>light-dark()</code>, subgrid, and container queries.</p>
+      <p data-i18n-html="footer_bottom">&copy; 2026 qq136692547-cmyk. Built with zero dependencies, native CSS <code>light-dark()</code>, subgrid, and container queries.</p>
     </div>
   </footer>
 
