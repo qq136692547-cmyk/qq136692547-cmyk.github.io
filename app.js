@@ -69,8 +69,8 @@
       action_chrome_ext: "Chrome Ext",
       card_flow_sub: "Google Flow Filmmaking & Veo 3.1 Plugin",
       card_flow_desc:
-        "Production-grade AI filmmaking & multimodal generation plugin for Google Flow. Live Credit Sniffer, Veo 3.1 5-slot grammar, and 4-tier downloads.",
-      card_flow_note: "v0.3.0 · 23/23 Tests",
+        "Production-grade AI filmmaking & multimodal generation plugin for Google Flow. Fail-Closed Credit Sniffer, Veo 3.1 & Omni 1.2 5-slot grammar, and 60-credit pool ceiling.",
+      card_flow_note: "v0.3.1 · 29/29 Tests",
       card_01_sub: "Pure Gemini 4 Cloud Offloading Plugin",
       card_01_desc:
         "Cloud offloading and workflow automation for Google AI Studio via Antigravity browser subagent. Preserve local IDE quota with Pure Gemini 4 (1M context, Thinking High+).",
@@ -193,8 +193,8 @@
       action_chrome_ext: "Chrome 扩展",
       card_flow_sub: "Google Flow 影视工业级多模态生成插件",
       card_flow_desc:
-        "专为 Google Flow (flow.google.com) 打造的 AI 影视分镜与多模态生成引擎。内置实时积分嗅探器、Veo 3.1 五段式运镜语法与 4 档分辨率下载。",
-      card_flow_note: "v0.3.0 · 23/23 测试全通",
+        "专为 Google Flow (flow.google.com) 打造的工业级影视分镜与多模态生成引擎。内置防穿透实时积分嗅探器、60 积分反重力额度保护硬顶、Omni 1.2 旗舰运镜语法与 4 档分镜下载。",
+      card_flow_note: "v0.3.1 · 29/29 测试全通",
       card_01_sub: "Google AI Studio 云端推理卸载插件",
       card_01_desc:
         "通过 Antigravity 内置浏览器子智能体，将重度推理与百万字文档分析卸载至 Google AI Studio 纯 Gemini 4（1M 上下文，Thinking High+），零消耗本地 IDE 配额。",
