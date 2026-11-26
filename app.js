@@ -36,10 +36,10 @@
       hero_cta_primary: "Explore Antigravity AI Studio",
       hero_cta_secondary: "Browse All 12 Projects",
       spotlight_img_alt:
-        "Hand-drawn technical showcase banner for Antigravity AI Studio v0.2.1 Pure Gemini 4 cloud offloading architecture",
+        "Hand-drawn technical showcase banner for Antigravity AI Studio v0.2.2 Pure Gemini 4 cloud offloading architecture",
       spotlight_badges_aria: "Flagship highlights",
       badge_context: "1M Context",
-      badge_tests: "266/266 Tests",
+      badge_tests: "269/269 Tests",
       spotlight_desc:
         "Cloud offloading and workflow automation for Google AI Studio via Antigravity's built-in browser subagent. Preserve 100% of your local IDE quota with Pure Gemini 4 (<code>Hydrogen</code>, <code>Argon</code>, <code>Neon</code>, <code>Carbon</code>), enforced <code>Thinking level &gt;= High</code>, and zero local daemons.",
       spotlight_install_label: "One-click install for Antigravity",
@@ -74,7 +74,7 @@
       card_01_sub: "Pure Gemini 4 Cloud Offloading Plugin",
       card_01_desc:
         "Cloud offloading and workflow automation for Google AI Studio via Antigravity browser subagent. Preserve local IDE quota with Pure Gemini 4 (1M context, Thinking High+).",
-      card_01_note: "v0.2.1 · 266/266 Tests",
+      card_01_note: "v0.2.2 · 269/269 Tests",
       card_02_sub: "Multimodal MCP Media Plugin",
       card_02_desc:
         "MCP tool plugin for Magpie exposing Nano Banana 2.1, Gemini Files API, and 3.8 TTS.",
@@ -160,10 +160,10 @@
       hero_cta_primary: "探索 Antigravity AI Studio",
       hero_cta_secondary: "浏览全部 12 个项目",
       spotlight_img_alt:
-        "Antigravity AI Studio v0.2.1 Pure Gemini 4 云端卸载架构手绘技术展示横幅",
+        "Antigravity AI Studio v0.2.2 Pure Gemini 4 云端卸载架构手绘技术展示横幅",
       spotlight_badges_aria: "旗舰项目亮点",
       badge_context: "1M 上下文",
-      badge_tests: "266/266 测试通过",
+      badge_tests: "269/269 测试通过",
       spotlight_desc:
         "通过 Antigravity 内置浏览器子智能体，把长上下文推理与 Prompt 调优自动卸载到 Google AI Studio 纯 Gemini 4（<code>Hydrogen</code>、<code>Argon</code>、<code>Neon</code>、<code>Carbon</code>，1M 上下文、强制 <code>Thinking High+</code>），零本地守护进程，零消耗本地 IDE 配额。",
       spotlight_install_label: "一键安装到 Antigravity",
@@ -198,7 +198,7 @@
       card_01_sub: "Google AI Studio 云端推理卸载插件",
       card_01_desc:
         "通过 Antigravity 内置浏览器子智能体，将重度推理与百万字文档分析卸载至 Google AI Studio 纯 Gemini 4（1M 上下文，Thinking High+），零消耗本地 IDE 配额。",
-      card_01_note: "v0.2.1 · 266/266 测试通过",
+      card_01_note: "v0.2.2 · 269/269 测试通过",
       card_02_sub: "Magpie 多模态 MCP 媒体插件",
       card_02_desc:
         "面向 Magpie 的 MCP 多媒体工具插件，原生暴露 Nano Banana 2.1 生图、Gemini Files API 与 3.8 TTS 语音合成能力。",

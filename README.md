@@ -1,6 +1,6 @@
 # qq136692547-cmyk.github.io
 
-Zero-dependency static **GitHub Pages Open-Source Hub** showcasing all 12 original open-source projects by [qq136692547-cmyk](https://github.com/qq136692547-cmyk), with **[antigravity-aistudio](https://github.com/qq136692547-cmyk/antigravity-aistudio) v0.2.1** featured in the hero spotlight.
+Zero-dependency static **GitHub Pages Open-Source Hub** showcasing all 12 original open-source projects by [qq136692547-cmyk](https://github.com/qq136692547-cmyk), with **[antigravity-aistudio](https://github.com/qq136692547-cmyk/antigravity-aistudio) v0.2.2** featured in the hero spotlight.
 
 Live URL: [https://qq136692547-cmyk.github.io/](https://qq136692547-cmyk.github.io/)
 
