@@ -960,9 +960,8 @@ code {
 
 /* Responsive Comparison Table (container-query stacked fallback) */
 .table-wrapper {
-  overflow: auto;
+  overflow-x: auto;
   max-inline-size: 100%;
-  max-block-size: min(560px, 80vh);
   container-type: inline-size;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
@@ -1075,9 +1074,8 @@ code {
   }
 
   .comparison-table tbody th {
-    position: sticky;
-    inset-block-start: 0;
-    z-index: 2;
+    position: static;
+    white-space: normal;
     background-color: var(--bg-surface-alt);
     border-block-end: 1px solid var(--border-subtle);
   }
@@ -1204,7 +1202,7 @@ code {
   color: var(--text-secondary);
 }
 
-.quickstart-step code {
+.quickstart-step > code {
   display: inline-block;
   margin-top: 0.45rem;
   padding: 0.22rem 0.45rem;
