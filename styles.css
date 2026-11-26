@@ -935,9 +935,463 @@ code {
   margin: 0;
 }
 
+/* GEO Sections: Comparison Table, Case Study, Quickstart, FAQ, Discovery & References */
+.geo-section {
+  padding-block: 2.25rem;
+  border-block-start: 1px solid var(--border-subtle);
+}
+
+.section-header {
+  margin-bottom: 1.35rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  letter-spacing: -0.02em;
+}
+
+.section-lead {
+  margin: 0.45rem 0 0;
+  color: var(--text-secondary);
+  max-width: 68ch;
+  font-size: 0.96rem;
+}
+
+/* Responsive Comparison Table (container-query stacked fallback) */
+.table-wrapper {
+  overflow: auto;
+  max-inline-size: 100%;
+  max-block-size: min(560px, 80vh);
+  container-type: inline-size;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.table-wrapper:focus-visible {
+  outline: 2px solid var(--accent-cobalt);
+  outline-offset: 2px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9rem;
+  text-align: start;
+  --label-1: "Project";
+  --label-2: "Stack";
+  --label-3: "Primary Scope";
+  --label-4: "Verification";
+  --label-5: "Quota & Privacy";
+}
+
+:root[data-lang="zh"] .comparison-table {
+  --label-1: "项目";
+  --label-2: "技术栈";
+  --label-3: "核心定位";
+  --label-4: "测试验证";
+  --label-5: "额度与隐私";
+}
+
+.comparison-table caption {
+  padding: 0.85rem 1.1rem;
+  text-align: start;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-block-end: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface-alt);
+}
+
+.comparison-table thead {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 2;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.85rem 1rem;
+  border-block-end: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.comparison-table thead th {
+  background-color: var(--bg-surface-alt);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.comparison-table tbody th {
+  position: sticky;
+  inset-inline-start: 0;
+  z-index: 1;
+  background-color: var(--bg-surface);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+  border-block-end: 0;
+}
+
+.comparison-table tbody th a {
+  color: var(--accent-cobalt);
+  text-decoration: none;
+}
+
+.comparison-table tbody th a:hover,
+.comparison-table tbody th a:focus-visible {
+  text-decoration: underline;
+}
+
+@container (width < 600px) {
+  .comparison-table,
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table th,
+  .comparison-table td {
+    display: block;
+  }
+
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table tbody tr {
+    margin: 0.75rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .comparison-table tbody th {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 2;
+    background-color: var(--bg-surface-alt);
+    border-block-end: 1px solid var(--border-subtle);
+  }
+
+  .comparison-table td::before {
+    display: block;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    margin-bottom: 0.2rem;
+  }
+
+  .comparison-table td:nth-child(2)::before { content: var(--label-2) ": "; }
+  .comparison-table td:nth-child(3)::before { content: var(--label-3) ": "; }
+  .comparison-table td:nth-child(4)::before { content: var(--label-4) ": "; }
+  .comparison-table td:nth-child(5)::before { content: var(--label-5) ": "; }
+}
+
+/* Technical Case Study & Quote */
+.case-study-card {
+  padding: 1.5rem 1.65rem;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.byline-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.byline-row strong {
+  color: var(--text-primary);
+}
+
+.dense-prose {
+  margin: 0 0 1.25rem;
+  font-size: 0.97rem;
+  line-height: 1.72;
+  color: var(--text-primary);
+}
+
+.quote-card {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-inline-start: 4px solid var(--accent-cobalt);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background-color: var(--bg-surface-alt);
+}
+
+.quote-card blockquote {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.quote-card blockquote p {
+  margin: 0;
+}
+
+.quote-card figcaption {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.quote-card figcaption a {
+  color: var(--accent-cobalt);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.quote-card figcaption a:hover,
+.quote-card figcaption a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Quickstart Ordered Steps */
+.quickstart-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quickstart-step {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  margin-bottom: 0.65rem;
+  border-radius: 999px;
+  background-color: var(--accent-cobalt-soft);
+  color: var(--accent-cobalt);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.quickstart-step h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+}
+
+.quickstart-step p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.quickstart-step code {
+  display: inline-block;
+  margin-top: 0.45rem;
+  padding: 0.22rem 0.45rem;
+  border-radius: 0.3rem;
+  background-color: var(--bg-code);
+  color: var(--text-code);
+  font-size: 0.78rem;
+  word-break: break-all;
+}
+
+/* FAQ Accordion (h3 outside summary per accessibility best practices) */
+.faq-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.faq-item {
+  padding: 1.05rem 1.25rem;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.faq-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.faq-item details summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-cobalt);
+  cursor: pointer;
+}
+
+.faq-item details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item details summary::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-inline-start: 6px solid currentColor;
+  border-block-start: 4px solid transparent;
+  border-block-end: 4px solid transparent;
+  transition: transform 0.18s ease;
+}
+
+.faq-item details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.faq-item details summary:focus-visible {
+  outline: 2px solid var(--accent-cobalt);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+.faq-item details::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
+}
+
+.faq-item details:not([open])::details-content {
+  block-size: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .faq-item details::details-content {
+    transition: block-size 0.25s ease, content-visibility 0.25s ease allow-discrete;
+  }
+}
+
+.faq-answer {
+  margin: 0.65rem 0 0;
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+}
+
+/* Discovery & References Grid */
+.discovery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.info-panel {
+  padding: 1.35rem 1.45rem;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.info-panel h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.12rem;
+}
+
+.info-panel p {
+  margin: 0 0 0.85rem;
+  font-size: 0.91rem;
+  color: var(--text-secondary);
+}
+
+.info-list {
+  margin: 0;
+  padding-inline-start: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.info-list a {
+  color: var(--accent-cobalt);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.info-list a:hover,
+.info-list a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Trust & Policy Pages */
+.trust-main {
+  padding-block: 2.75rem 3.5rem;
+}
+
+.trust-article {
+  max-width: 54rem;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.trust-article h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.trust-article h2 {
+  margin: 1.65rem 0 0.55rem;
+  font-size: 1.22rem;
+}
+
+.trust-article p,
+.trust-article li {
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+}
+
+.trust-article ul {
+  padding-inline-start: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.trust-article a {
+  color: var(--accent-cobalt);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.trust-article a:hover,
+.trust-article a:focus-visible {
+  text-decoration: underline;
+}
+
 @media (max-width: 920px) {
   .hero-grid,
-  .footer-grid {
+  .footer-grid,
+  .quickstart-steps,
+  .discovery-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
@@ -981,7 +1435,8 @@ code {
   .lang-toggle,
   .theme-toggle,
   .header-nav a,
-  .demo-link {
+  .demo-link,
+  .faq-item details summary::before {
     transition: none;
   }
 

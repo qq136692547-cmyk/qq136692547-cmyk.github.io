@@ -1,4 +1,68 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers — explicitly allowed for Generative Engine Optimization (GEO)
+# Tier 1: Critical (OpenAI/ChatGPT, Anthropic/Claude, Perplexity, Google Gemini)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Tier 2: Important (Common Crawl, ByteDance, Meta, Amazon, Apple)
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Tier 3: Emerging (Cohere, DuckDuckGo, Allen Institute, xAI, You.com, Huawei)
+User-agent: cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: xAI-Bot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
 Sitemap: https://qq136692547-cmyk.github.io/sitemap.xml

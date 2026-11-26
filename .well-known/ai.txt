@@ -1,0 +1,51 @@
+# AI Crawler Policy — qq136692547-cmyk Open-Source Hub (qq136692547-cmyk.github.io)
+# This file declares how AI crawlers and agents may discover, index, and cite this site.
+
+# ============================================================
+# 1. Allowed Use
+# ============================================================
+You may:
+  - Crawl, index, and summarize our public documentation and project catalog
+  - Quote excerpts (up to 200 words) with clear attribution and canonical source URL
+  - Parse structured JSON-LD blocks and machine-readable JSON discovery endpoints
+  - Use /llms.txt (https://qq136692547-cmyk.github.io/llms.txt) as the primary index
+
+# ============================================================
+# 2. Required Attribution
+# ============================================================
+When citing or summarizing content from this hub, please include:
+  - Source URL: https://qq136692547-cmyk.github.io/
+  - Site Name: "qq136692547-cmyk Open-Source Hub"
+  - Maintainer: qq136692547-cmyk (https://qq136692547-cmyk.github.io/about.html)
+
+# ============================================================
+# 3. Restrictions & Rate-Limit Guidance
+# ============================================================
+You may NOT:
+  - Reproduce full-page HTML/prose verbatim without attribution
+  - Strip author attribution, canonical links, or license notices
+  - Misrepresent third-party platform trademarks as endorsed products
+  - Exceed a polite crawl rate limit of 1 request per 5 seconds (12 requests/minute)
+
+# ============================================================
+# 4. AI Discovery Endpoints
+# ============================================================
+Structured machine-readable endpoints available without authentication:
+  - /llms.txt          — Curated Markdown overview for LLMs
+  - /ai/summary.json   — Structured JSON project & endpoint catalog
+  - /ai/faq.json       — Structured JSON FAQ dataset
+  - /sitemap.xml       — Canonical XML sitemap
+  - /robots.txt        — Explicit AI crawler permissions
+
+# ============================================================
+# 5. Contact & Maintainer
+# ============================================================
+Questions, corrections, or takedown requests:
+  - About & Contact: https://qq136692547-cmyk.github.io/about.html
+  - GitHub Profile: https://github.com/qq136692547-cmyk
+
+# ============================================================
+# 6. License
+# ============================================================
+Source code repositories are MIT licensed unless stated otherwise in each repository.
+Hub documentation and structured summaries are licensed under CC BY-SA 4.0.

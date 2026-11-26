@@ -1,0 +1,38 @@
+{
+  "$schema": "https://geoscore.help/ai/schema/faq.v1.json",
+  "site": "qq136692547-cmyk Open-Source Hub",
+  "url": "https://qq136692547-cmyk.github.io/",
+  "last_updated": "2026-11-26",
+  "faqs": [
+    {
+      "id": "what-is-hub",
+      "question": "What is qq136692547-cmyk Open-Source Hub?",
+      "answer": "qq136692547-cmyk Open-Source Hub is the canonical static portfolio and technical documentation index for 12 source-available projects maintained by qq136692547-cmyk across four domains: Antigravity AI and Gemini workflow plugins, local-first developer utilities, Generative Engine Optimization (GEO) auditing via geo-score, and e-commerce/market analytics. The hub itself runs with zero runtime dependencies and zero tracking telemetry.",
+      "category": "overview"
+    },
+    {
+      "id": "how-does-aistudio-preserve-quota",
+      "question": "How does antigravity-aistudio preserve local IDE quota?",
+      "answer": "antigravity-aistudio v0.2.2 routes heavy long-context reasoning (4,000 to 1,000,000 tokens), prompt tuning, and independent diff audits to Google AI Studio via Antigravity's built-in browser subagent using Pure Gemini 4 models (Hydrogen, Argon, Neon, Carbon) with Thinking level set to High or above. Local file edits, git commands, and test execution stay on the local workstation, avoiding redundant local desktop quota consumption.",
+      "category": "architecture"
+    },
+    {
+      "id": "how-does-flow-protect-credits",
+      "question": "How does antigravity-flow protect shared Google One AI credits?",
+      "answer": "antigravity-flow v0.3.2 enforces a Fail-Closed Live Credit Sniffer that parses the visible credit indicator before clicking Start generation and halts immediately if the readout is ambiguous or exceeds safety thresholds. Static Nano Banana 2.1 images cost 0 credits and run automatically within a 12-dispatch session soft cap, whereas paid Veo 3.1 or Omni 1.2 video shots pause in checkpoint mode and enforce a 60-credit single-action ceiling and 120-credit session limit.",
+      "category": "safety"
+    },
+    {
+      "id": "difference-between-flagships",
+      "question": "What is the difference between antigravity-aistudio, antigravity-flow, and geo-score?",
+      "answer": "antigravity-aistudio focuses on cloud text, code, and multimodal reasoning offload in Google AI Studio; antigravity-flow orchestrates storyboards, visual Ingredients, and Veo 3.1 / Omni 1.2 video generation in Google Flow; and geo-score is a standalone Generative Engine Optimization audit suite (web app, Chrome MV3 extension v1.9, CLI, and MCP server) that evaluates 85+ checks across 11 AI search visibility dimensions.",
+      "category": "comparison"
+    },
+    {
+      "id": "privacy-and-licensing",
+      "question": "Are these projects free, open source, and safe from telemetry tracking?",
+      "answer": "Yes. All 12 repositories listed on the hub are source-available on GitHub, primarily under the MIT License, and are engineered without hidden tracking pixels, analytics beacons, or invasive telemetry. Local-first utilities such as QuickNote (SQLite), bookmark-health-master (Chrome MV3), and anan-devtools process user data locally on the user's device, and this hub only makes an optional read-only fetch to the public GitHub REST API to refresh repository star counts.",
+      "category": "trust"
+    }
+  ]
+}

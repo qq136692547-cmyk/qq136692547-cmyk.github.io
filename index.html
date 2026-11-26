@@ -4,28 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
-  <script>
-    try {
-      document.querySelector('meta[name="color-scheme"]').content = localStorage.getItem("color-scheme") ?? "light dark";
-    } catch {}
-  </script>
-  <script>
-    try {
-      var langParam = new URLSearchParams(window.location.search).get("lang");
-      var savedLang = localStorage.getItem("site-lang");
-      var navLang = (navigator.language || "").toLowerCase();
-      var initialLang = (langParam === "zh" || langParam === "en")
-        ? langParam
-        : ((savedLang === "zh" || savedLang === "en") ? savedLang : (navLang.startsWith("zh") ? "zh" : "en"));
-      document.documentElement.lang = initialLang === "zh" ? "zh-CN" : "en";
-      document.documentElement.dataset.lang = initialLang;
-    } catch {}
-  </script>
+  <script>try{document.querySelector('meta[name="color-scheme"]').content=localStorage.getItem("color-scheme")??"light dark"}catch{}try{var p=new URLSearchParams(location.search).get("lang"),s=localStorage.getItem("site-lang"),n=(navigator.language||"").toLowerCase(),l=p==="zh"||p==="en"?p:s==="zh"||s==="en"?s:n.startsWith("zh")?"zh":"en";document.documentElement.lang=l==="zh"?"zh-CN":"en";document.documentElement.dataset.lang=l}catch{}</script>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-R361j0I7HgIYn5H5MlvS3bzQ+ypXg27M39gyW3tumgU='; style-src 'self'; img-src 'self' https://raw.githubusercontent.com https://geoscore.help data:; connect-src 'self' https://api.github.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <title>qq136692547-cmyk | Open-Source Hub &amp; Antigravity AI Studio</title>
-  <meta name="description" content="Official open-source hub for qq136692547-cmyk: 11 original projects across Antigravity AI &amp; Gemini plugins, local-first developer tools, AI Search (GEO), and commerce analytics.">
+  <meta name="description" content="Official open-source hub for qq136692547-cmyk: 12 original projects across Antigravity AI &amp; Gemini plugins, local-first developer tools, AI Search (GEO), and commerce analytics.">
   <meta name="author" content="qq136692547-cmyk">
+  <meta name="last-modified" content="2026-11-26">
   <link rel="canonical" href="https://qq136692547-cmyk.github.io/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="qq136692547-cmyk">
   <meta property="og:title" content="qq136692547-cmyk | Open-Source Developer Hub">
   <meta property="og:description" content="12 open-source projects featuring antigravity-aistudio v0.2.2 (Pure Gemini 4 cloud offloading), antigravity-flow v0.3.2, Magpie MCP plugins, QuickNote, GEO Score, and seller tools.">
   <meta property="og:url" content="https://qq136692547-cmyk.github.io/">
@@ -38,8 +25,190 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="512x512" href="assets/brand-icon-512.png">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "qq136692547-cmyk Open-Source Lab",
+    "url": "https://qq136692547-cmyk.github.io/",
+    "logo": "https://qq136692547-cmyk.github.io/assets/brand-icon-512.png",
+    "description": "Independent open-source engineering lab maintaining 12 source-available projects across Antigravity AI workflow plugins, local-first tools, GEO auditing, and commerce analytics.",
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "qq136692547-cmyk"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "technical support",
+      "url": "https://qq136692547-cmyk.github.io/about.html"
+    },
+    "sameAs": [
+      "https://github.com/qq136692547-cmyk",
+      "https://github.com/qq136692547-cmyk/antigravity-aistudio",
+      "https://github.com/qq136692547-cmyk/antigravity-flow",
+      "https://github.com/qq136692547-cmyk/geo-score",
+      "https://geoscore.help/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "qq136692547-cmyk Open-Source Hub",
+    "url": "https://qq136692547-cmyk.github.io/",
+    "description": "Official bilingual directory and technical benchmark showcase for 12 original open-source projects by qq136692547-cmyk.",
+    "inLanguage": ["en", "zh-CN"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "qq136692547-cmyk Open-Source Lab"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-11-26"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "qq136692547-cmyk",
+    "url": "https://qq136692547-cmyk.github.io/about.html",
+    "image": "https://qq136692547-cmyk.github.io/assets/brand-icon-512.png",
+    "jobTitle": "Independent Open-Source Software & AI Workflow Engineer",
+    "description": "Author and maintainer of antigravity-aistudio, antigravity-flow, geo-score, QuickNote, bookmark-health-master, and anan-devtools.",
+    "knowsAbout": [
+      "Generative Engine Optimization (GEO)",
+      "Gemini 4 Cloud Offloading",
+      "Google Flow Automation",
+      "Local-First Software",
+      "Model Context Protocol (MCP)"
+    ],
+    "affiliation": {
+      "@type": "Organization",
+      "name": "qq136692547-cmyk Open-Source Lab"
+    },
+    "sameAs": [
+      "https://github.com/qq136692547-cmyk",
+      "https://geoscore.help/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GEO Benchmark Case Study: Pragmatic AI Plugins, Local-First Tools & Zero-Telemetry Architecture",
+    "description": "Technical overview and empirical GeoScore benchmark case study comparing cloud offloading, fail-closed credit protection, and local-first software engineering across 12 open-source projects.",
+    "author": {
+      "@type": "Person",
+      "name": "qq136692547-cmyk",
+      "url": "https://qq136692547-cmyk.github.io/about.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "qq136692547-cmyk Open-Source Lab",
+      "url": "https://qq136692547-cmyk.github.io/"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-11-26",
+    "mainEntityOfPage": "https://qq136692547-cmyk.github.io/#case-study",
+    "image": "https://raw.githubusercontent.com/qq136692547-cmyk/antigravity-aistudio/main/assets/hero-banner.png",
+    "inLanguage": "en",
+    "citation": [
+      "https://geoscore.help/",
+      "https://llmstxt.org/",
+      "https://csrc.nist.gov/",
+      "https://www.w3.org/TR/CSP3/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "qq136692547-cmyk Open-Source Hub FAQ",
+    "url": "https://qq136692547-cmyk.github.io/#faq",
+    "description": "Frequently asked questions covering architecture, local IDE quota preservation, credit ceilings, and zero-telemetry design.",
+    "inLanguage": "en",
+    "dateModified": "2026-11-26",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is qq136692547-cmyk Open-Source Hub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "qq136692547-cmyk Open-Source Hub is the canonical static portfolio and technical documentation index for 12 source-available projects maintained by qq136692547-cmyk across four domains: Antigravity AI and Gemini workflow plugins, local-first developer utilities, Generative Engine Optimization (GEO) auditing via geo-score, and e-commerce/market analytics. The hub itself runs with zero runtime dependencies and zero tracking telemetry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does antigravity-aistudio preserve local IDE quota?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "antigravity-aistudio v0.2.2 routes heavy long-context reasoning (4,000 to 1,000,000 tokens), prompt tuning, and independent diff audits to Google AI Studio via Antigravity's built-in browser subagent using Pure Gemini 4 models (Hydrogen, Argon, Neon, Carbon) with Thinking level set to High or above. Local file edits, git commands, and test execution stay on the local workstation, avoiding redundant local desktop quota consumption."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does antigravity-flow protect shared Google One AI credits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "antigravity-flow v0.3.2 enforces a Fail-Closed Live Credit Sniffer that parses the visible credit indicator before clicking Start generation and halts immediately if the readout is ambiguous or exceeds safety thresholds. Static Nano Banana 2.1 images cost 0 credits and run automatically within a 12-dispatch session soft cap, whereas paid Veo 3.1 or Omni 1.2 video shots pause in checkpoint mode and enforce a 60-credit single-action ceiling and 120-credit session limit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between antigravity-aistudio, antigravity-flow, and geo-score?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "antigravity-aistudio focuses on cloud text, code, and multimodal reasoning offload in Google AI Studio; antigravity-flow orchestrates storyboards, visual Ingredients, and Veo 3.1 / Omni 1.2 video generation in Google Flow; and geo-score is a standalone Generative Engine Optimization audit suite (web app, Chrome MV3 extension v1.9, CLI, and MCP server) that evaluates 85+ checks across 11 AI search visibility dimensions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are these projects free, open source, and safe from telemetry tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All 12 repositories listed on the hub are source-available on GitHub, primarily under the MIT License, and are engineered without hidden tracking pixels, analytics beacons, or invasive telemetry. Local-first utilities such as QuickNote (SQLite), bookmark-health-master (Chrome MV3), and anan-devtools process user data locally on the user's device, and this hub only makes an optional read-only fetch to the public GitHub REST API to refresh repository star counts."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Install Antigravity AI Plugins and Run a GEO Visibility Audit",
+    "description": "Three-step quickstart to install flagship Antigravity plugins, configure Pure Gemini 4 offloading, and verify static site GEO readiness.",
+    "totalTime": "PT5M",
+    "tool": ["Antigravity CLI", "GitHub", "GeoScore"],
+    "supply": ["Google AI Studio or Google Flow session"],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Step 1: Install the flagship Antigravity plugins",
+        "text": "Run agy plugin install https://github.com/qq136692547-cmyk/antigravity-aistudio (and optionally antigravity-flow) from your terminal to register skills, rules, and browser-subagent workflows."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Step 2: Configure Pure Gemini 4 offloading and fail-closed safety bounds",
+        "text": "Use Pure Gemini 4 (Hydrogen, Argon, Neon, Carbon) with Thinking level set to High or above, and keep antigravity-flow in checkpoint mode for paid Veo 3.1 or Omni 1.2 renders under the 60-credit ceiling."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Step 3: Audit AI search readiness with geo-score",
+        "text": "Run npx geoscore https://qq136692547-cmyk.github.io/ or scan via geoscore.help to verify robots.txt, llms.txt, top-level JSON-LD schemas, discovery endpoints, and zero negative signals."
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#projects" data-i18n="skip_link">Skip to projects</a>
 
   <header class="site-header">
@@ -57,6 +226,8 @@
       <nav class="header-nav" data-i18n-aria-label="nav_aria" aria-label="Primary navigation">
         <a href="#spotlight" data-i18n="nav_flagship">Flagship</a>
         <a href="#projects" data-i18n="nav_projects">Projects (12)</a>
+        <a href="#case-study" data-i18n="nav_case_study">Case Study</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
         <a href="#support" data-i18n="nav_support">Support</a>
         <a href="https://github.com/qq136692547-cmyk" target="_blank" rel="noopener noreferrer" data-i18n="nav_github">GitHub</a>
         <button type="button" id="lang-toggle" class="lang-toggle" aria-label="切换为中文">中文</button>
@@ -166,7 +337,7 @@
             <p class="eyebrow" data-i18n="catalog_eyebrow">Full Repository Index</p>
             <h2 id="catalog-title" data-i18n="catalog_title">All 12 Open-Source Projects</h2>
           </div>
-          <div class="search-wrap">
+          <search class="search-wrap">
             <label for="project-search" class="sr-only" data-i18n="search_label">Search projects by name, stack, or keyword</label>
             <input
               type="search"
@@ -177,7 +348,7 @@
               autocomplete="off"
               spellcheck="false"
             >
-          </div>
+          </search>
         </div>
 
         <div class="filter-bar" role="group" data-i18n-aria-label="filter_bar_aria" aria-label="Filter projects by category">
@@ -438,7 +609,7 @@
               All-in-one GEO/AEO audit platform (11 dimensions, 85 checks) with Chrome Extension v1.9, CLI, MCP server, and open GEO handbook.
             </p>
             <footer class="card-footer">
-              <span class="footer-note" data-i18n="card_08_note">v1.9 · 85 Checks</span>
+              <span class="footer-note" data-i18n="card_08_note">v1.9 &middot; 85 Checks</span>
               <span class="footer-actions">
                 <a class="demo-link" href="https://chromewebstore.google.com/detail/geoscore-free-geo-aeo-llm/cboppgehhkhaamcgfcikhekkdaelichn" target="_blank" rel="noopener noreferrer" data-i18n="action_chrome_ext">Chrome Ext</a>
                 <a class="demo-link" href="https://geoscore.help/" target="_blank" rel="noopener noreferrer" data-i18n="action_live_demo">Live Demo</a>
@@ -537,6 +708,230 @@
         </div>
       </div>
     </section>
+
+    <section id="comparison" class="geo-section" aria-labelledby="comparison-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="cmp_eyebrow">Architecture Matrix</p>
+          <h2 id="comparison-title" data-i18n="cmp_title">Dual-Flagship &amp; Core Tooling Comparison</h2>
+          <p class="section-lead" data-i18n="cmp_lead">
+            Side-by-side comparison of flagship Antigravity plugins, GEO auditing, and local-first utilities across test coverage, quota boundaries, and privacy model.
+          </p>
+        </div>
+
+        <div tabindex="0" role="region" aria-labelledby="comparison-caption" class="table-wrapper">
+          <table class="comparison-table">
+            <caption id="comparison-caption" data-i18n="cmp_caption">Verified specifications for flagship repositories and primary local-first utilities</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="cmp_col_project">Project</th>
+                <th scope="col" data-i18n="cmp_col_stack">Stack</th>
+                <th scope="col" data-i18n="cmp_col_scope">Primary Scope</th>
+                <th scope="col" data-i18n="cmp_col_tests">Verification</th>
+                <th scope="col" data-i18n="cmp_col_quota">Quota &amp; Privacy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><a href="https://github.com/qq136692547-cmyk/antigravity-aistudio" target="_blank" rel="noopener noreferrer">antigravity-aistudio</a></th>
+                <td data-i18n="cmp_r1_stack">Python / Browser Subagent</td>
+                <td data-i18n="cmp_r1_scope">Pure Gemini 4 (1M context, Thinking High+) cloud offloading in Google AI Studio</td>
+                <td data-i18n="cmp_r1_tests">v0.2.2 · 269/269 tests passing</td>
+                <td data-i18n="cmp_r1_quota">0% local IDE quota spend; 15-30s pacing &amp; zero-retry verify gate</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://github.com/qq136692547-cmyk/antigravity-flow" target="_blank" rel="noopener noreferrer">antigravity-flow</a></th>
+                <td data-i18n="cmp_r2_stack">Python / Google Flow</td>
+                <td data-i18n="cmp_r2_scope">Storyboards, Nano Banana 2.1 Ingredients, Veo 3.1 &amp; Omni 1.2 video shots</td>
+                <td data-i18n="cmp_r2_tests">v0.3.2 · 38/38 tests passing</td>
+                <td data-i18n="cmp_r2_quota">Fail-Closed Credit Sniffer; 60-credit ceiling &amp; 120-credit session cap</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://geoscore.help/" target="_blank" rel="noopener noreferrer">geo-score</a></th>
+                <td data-i18n="cmp_r3_stack">JS / Chrome MV3 / CLI / MCP</td>
+                <td data-i18n="cmp_r3_scope">GEO/AEO auditing across AI crawlability, llms.txt, schema, and E-E-A-T</td>
+                <td data-i18n="cmp_r3_tests">v1.9 · 85+ checks across 11 dimensions</td>
+                <td data-i18n="cmp_r3_quota">100% browser-side single audits; MIT code &amp; zero tracking</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://github.com/qq136692547-cmyk/QuickNote" target="_blank" rel="noopener noreferrer">QuickNote</a></th>
+                <td data-i18n="cmp_r4_stack">Rust / Tauri / SQLite</td>
+                <td data-i18n="cmp_r4_scope">Offline-first developer scratchpad with optional DeepSeek workflow hooks</td>
+                <td data-i18n="cmp_r4_tests">Local SQLite ACID vault</td>
+                <td data-i18n="cmp_r4_quota">100% on-device data custody; zero cloud lock-in</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="case-study" class="geo-section" aria-labelledby="case-study-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="cs_eyebrow">Technical Overview &amp; Real-World Example</p>
+          <h2 id="case-study-title" data-i18n="cs_title">GEO Benchmark Case Study: Static Hub Optimization</h2>
+        </div>
+
+        <article class="case-study-card">
+          <div class="byline-row">
+            <strong data-i18n="byline_author">By qq136692547-cmyk</strong>
+            <span aria-hidden="true">&middot;</span>
+            <span data-i18n="byline_published">Published April 10, 2026</span>
+            <span aria-hidden="true">&middot;</span>
+            <span data-i18n-html="byline_updated">Last updated <time datetime="2026-11-26">November 26, 2026</time></span>
+            <span aria-hidden="true">&middot;</span>
+            <span data-i18n="byline_proof">Verified via GitHub stars, Chrome Web Store user reviews &amp; 307/307 flagship unit tests</span>
+          </div>
+
+          <p class="dense-prose" data-i18n-html="cs_prose">
+            Generative Engine Optimization (GEO) benchmark analysis demonstrates that clean visual UI alone does not ensure citation by modern AI search systems; indeed, our baseline audit of this static hub on <a href="https://geoscore.help/" target="_blank" rel="noopener noreferrer">GeoScore</a> scored 53 out of 100 (53.0%) primarily due to missing machine-readable discovery endpoints and unflattened JSON-LD entities. Therefore, we refactored the showcase around verifiable open-source benchmarks: <code>antigravity-aistudio</code> v0.2.2 achieves 100% pass rates across 269 unit tests while offloading 4,000 to 1,000,000 token workflows to Pure Gemini 4, whereas <code>antigravity-flow</code> v0.3.2 passes 38/38 tests and enforces a strict 60-credit ceiling over shared Google One AI pools. Moreover, <code>geo-score</code> v1.9 evaluates 85+ checks across 11 visibility dimensions with 0% tracking overhead, compared to proprietary SaaS auditors that require paid subscriptions. Additionally, pairing static HTML with top-level Organization, Person, Article, FAQPage, and HowTo schemas plus explicit crawler directives makes documentation immediately parseable by retrieval agents. However, automated browser subagent workflows carry a practical trade-off and limitation: it should be noted that remote web UI selectors depend on upstream platform stability, and Cloudflare SVG badge caches refresh on a 6-hour (<code>s-maxage=21600</code>) edge cycle rather than instantaneously.
+          </p>
+
+          <figure class="quote-card">
+            <blockquote cite="https://geoscore.help/">
+              <p data-i18n="cs_quote">
+                &ldquo;GEO means structuring public documentation with explicit AI crawler access, a curated llms.txt index, standalone JSON-LD entity schemas, and verifiable E-E-A-T trust pages so retrieval engines can cite primary engineering facts accurately.&rdquo;
+              </p>
+            </blockquote>
+            <figcaption data-i18n-html="cs_quote_cite">
+              Principle summarized from <cite><a href="https://geoscore.help/" target="_blank" rel="noopener noreferrer">GeoScore GEO Audit Methodology</a></cite> &amp; <a href="about.html">About qq136692547-cmyk</a>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section id="quickstart" class="geo-section" aria-labelledby="quickstart-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="qs_eyebrow">Step-by-Step Workflow</p>
+          <h2 id="quickstart-title" data-i18n="qs_title">3-Step Quickstart for Antigravity &amp; GEO Verification</h2>
+        </div>
+
+        <ol class="quickstart-steps">
+          <li class="quickstart-step">
+            <span class="step-badge" data-i18n="qs_step1_badge">Step 1</span>
+            <h3 data-i18n="qs_step1_title">Install Flagship Plugins</h3>
+            <p data-i18n-html="qs_step1_desc">Install <code>antigravity-aistudio</code> and <code>antigravity-flow</code> directly into Antigravity without background daemons.</p>
+            <code>agy plugin install https://github.com/qq136692547-cmyk/antigravity-aistudio</code>
+          </li>
+          <li class="quickstart-step">
+            <span class="step-badge" data-i18n="qs_step2_badge">Step 2</span>
+            <h3 data-i18n="qs_step2_title">Configure Pure Gemini 4 &amp; Credit Guards</h3>
+            <p data-i18n="qs_step2_desc">Route 4K-1M token reasoning to Pure Gemini 4 (Thinking High+) and keep paid Veo 3.1 / Omni 1.2 renders in checkpoint mode under the 60-credit ceiling.</p>
+          </li>
+          <li class="quickstart-step">
+            <span class="step-badge" data-i18n="qs_step3_badge">Step 3</span>
+            <h3 data-i18n="qs_step3_title">Run a GEO Readiness Scan</h3>
+            <p data-i18n-html="qs_step3_desc">Verify <code>robots.txt</code>, <code>/llms.txt</code>, JSON-LD blocks, and discovery endpoints with <code>geo-score</code> CLI or web scanner.</p>
+            <code>npx geoscore https://qq136692547-cmyk.github.io/</code>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="faq" class="geo-section" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="faq_eyebrow">Questions &amp; Answers</p>
+          <h2 id="faq-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3 data-i18n="faq_q1">What is qq136692547-cmyk Open-Source Hub?</h3>
+            <details open>
+              <summary data-i18n="faq_toggle">View technical answer</summary>
+              <p class="faq-answer" data-i18n="faq_a1">
+                qq136692547-cmyk Open-Source Hub is the canonical static portfolio and technical documentation index for 12 source-available projects maintained by qq136692547-cmyk across four domains: Antigravity AI and Gemini workflow plugins, local-first developer utilities, Generative Engine Optimization (GEO) auditing via geo-score, and e-commerce/market analytics. The hub itself runs with zero runtime dependencies and zero tracking telemetry.
+              </p>
+            </details>
+          </article>
+
+          <article class="faq-item">
+            <h3 data-i18n="faq_q2">How does antigravity-aistudio preserve local IDE quota?</h3>
+            <details>
+              <summary data-i18n="faq_toggle">View technical answer</summary>
+              <p class="faq-answer" data-i18n="faq_a2">
+                antigravity-aistudio v0.2.2 routes heavy long-context reasoning (4,000 to 1,000,000 tokens), prompt tuning, and independent diff audits to Google AI Studio via Antigravity's built-in browser subagent using Pure Gemini 4 models (Hydrogen, Argon, Neon, Carbon) with Thinking level set to High or above. Local file edits, git commands, and test execution stay on the local workstation, avoiding redundant local desktop quota consumption.
+              </p>
+            </details>
+          </article>
+
+          <article class="faq-item">
+            <h3 data-i18n="faq_q3">How does antigravity-flow protect shared Google One AI credits?</h3>
+            <details>
+              <summary data-i18n="faq_toggle">View technical answer</summary>
+              <p class="faq-answer" data-i18n="faq_a3">
+                antigravity-flow v0.3.2 enforces a Fail-Closed Live Credit Sniffer that parses the visible credit indicator before clicking Start generation and halts immediately if the readout is ambiguous or exceeds safety thresholds. Static Nano Banana 2.1 images cost 0 credits and run automatically within a 12-dispatch session soft cap, whereas paid Veo 3.1 or Omni 1.2 video shots pause in checkpoint mode and enforce a 60-credit single-action ceiling and 120-credit session limit.
+              </p>
+            </details>
+          </article>
+
+          <article class="faq-item">
+            <h3 data-i18n="faq_q4">What is the difference between antigravity-aistudio, antigravity-flow, and geo-score?</h3>
+            <details>
+              <summary data-i18n="faq_toggle">View technical answer</summary>
+              <p class="faq-answer" data-i18n="faq_a4">
+                antigravity-aistudio focuses on cloud text, code, and multimodal reasoning offload in Google AI Studio; antigravity-flow orchestrates storyboards, visual Ingredients, and Veo 3.1 / Omni 1.2 video generation in Google Flow; and geo-score is a standalone Generative Engine Optimization audit suite (web app, Chrome MV3 extension v1.9, CLI, and MCP server) that evaluates 85+ checks across 11 AI search visibility dimensions.
+              </p>
+            </details>
+          </article>
+
+          <article class="faq-item">
+            <h3 data-i18n="faq_q5">Are these projects free, open source, and safe from telemetry tracking?</h3>
+            <details>
+              <summary data-i18n="faq_toggle">View technical answer</summary>
+              <p class="faq-answer" data-i18n="faq_a5">
+                Yes. All 12 repositories listed on the hub are source-available on GitHub, primarily under the MIT License, and are engineered without hidden tracking pixels, analytics beacons, or invasive telemetry. Local-first utilities such as QuickNote (SQLite), bookmark-health-master (Chrome MV3), and anan-devtools process user data locally on the user's device, and this hub only makes an optional read-only fetch to the public GitHub REST API to refresh repository star counts.
+              </p>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="discovery" class="geo-section" aria-labelledby="discovery-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="disc_eyebrow">Agent Endpoints &amp; Standards</p>
+          <h2 id="discovery-title" data-i18n="disc_title">AI Discovery Endpoints &amp; Authoritative References</h2>
+        </div>
+
+        <div class="discovery-grid">
+          <div class="info-panel">
+            <h3 data-i18n="disc_endpoints_h3">Machine-Readable Discovery Endpoints</h3>
+            <p data-i18n-html="disc_endpoints_p">
+              Read-only REST and static discovery endpoints require zero authentication. Automated AI crawlers should respect a polite <strong>rate limit</strong> of at most 1 request per 5 seconds (<code>X-RateLimit</code> guidance: 12 requests/minute).
+            </p>
+            <ul class="info-list">
+              <li><a href="llms.txt">/llms.txt</a> &mdash; <span data-i18n="ep_llms">Curated LLM Markdown index (&lt;200 lines)</span></li>
+              <li><a href=".well-known/ai.txt">/.well-known/ai.txt</a> &mdash; <span data-i18n="ep_aitxt">AI crawler permissions, attribution &amp; licensing</span></li>
+              <li><a href="ai/summary.json">/ai/summary.json</a> &mdash; <span data-i18n="ep_summary">Structured JSON catalog for all 12 projects</span></li>
+              <li><a href="ai/faq.json">/ai/faq.json</a> &mdash; <span data-i18n="ep_faq">Structured JSON Q&amp;A dataset</span></li>
+              <li><a href="robots.txt">/robots.txt</a> &mdash; <span data-i18n="ep_robots">Explicit allow rules for 20 Tier 1-3 AI crawlers</span></li>
+              <li><a href="sitemap.xml">/sitemap.xml</a> &mdash; <span data-i18n="ep_sitemap">Canonical XML page index</span></li>
+            </ul>
+          </div>
+
+          <div id="references" class="info-panel">
+            <h3 data-i18n="disc_refs_h3">Authoritative References &amp; Further Reading</h3>
+            <p data-i18n="disc_refs_p">
+              Primary web standards, security specifications, and GEO evaluation references governing the architecture of this hub:
+            </p>
+            <ul class="info-list">
+              <li><a href="https://csrc.nist.gov/" target="_blank" rel="noopener noreferrer">NIST Computer Security Resource Center (CSRC)</a> &mdash; <span data-i18n="ref_nist">Federal web security &amp; cryptographic standards reference</span></li>
+              <li><a href="https://www.w3.org/TR/CSP3/" target="_blank" rel="noopener noreferrer">W3C Content Security Policy Level 3</a> &mdash; <span data-i18n="ref_w3c">CSP directive specification for script &amp; resource isolation</span></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP" target="_blank" rel="noopener noreferrer">MDN Web Docs: Content Security Policy</a> &mdash; <span data-i18n="ref_mdn">Practical browser CSP enforcement documentation</span></li>
+              <li><a href="https://schema.org/" target="_blank" rel="noopener noreferrer">Schema.org Vocabulary</a> &mdash; <span data-i18n="ref_schema">Structured JSON-LD entity definitions</span></li>
+              <li><a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer">The /llms.txt Proposed Standard</a> &mdash; <span data-i18n="ref_llmstxt">Markdown guidance convention for language models</span></li>
+              <li><a href="https://geoscore.help/" target="_blank" rel="noopener noreferrer">GeoScore AI Search &amp; GEO Audit Platform</a> &mdash; <span data-i18n="ref_geoscore">11-dimension AI visibility scanner &amp; live audit suite</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="support" class="site-footer">
@@ -549,6 +944,9 @@
         <div class="footer-links">
           <a href="https://github.com/qq136692547-cmyk" target="_blank" rel="noopener noreferrer" data-i18n="footer_gh_profile">GitHub Profile</a>
           <a href="https://github.com/qq136692547-cmyk/antigravity-aistudio#support--buy-me-a-coffee" target="_blank" rel="noopener noreferrer" data-i18n="footer_sponsor_link">antigravity-aistudio Sponsor &amp; QR Codes</a>
+          <a href="about.html" data-i18n="footer_about_link">About &amp; Contact</a>
+          <a href="privacy.html" data-i18n="footer_privacy_link">Privacy Policy</a>
+          <a href="terms.html" data-i18n="footer_terms_link">Terms of Use</a>
         </div>
       </div>
 

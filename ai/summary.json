@@ -1,0 +1,152 @@
+{
+  "$schema": "https://geoscore.help/ai/schema/summary.v1.json",
+  "version": "1.2.0",
+  "site": {
+    "name": "qq136692547-cmyk Open-Source Hub",
+    "url": "https://qq136692547-cmyk.github.io/",
+    "tagline": "Pragmatic AI plugins, local-first developer tools, AI Search (GEO) auditing, and commerce utilities.",
+    "description": "Official open-source engineering hub by qq136692547-cmyk featuring 12 source-available projects with zero runtime dependencies, zero tracking telemetry, and production-tested workflows including antigravity-aistudio v0.2.2, antigravity-flow v0.3.2, and geo-score v1.9.",
+    "category": "Open-Source Developer Hub / AI Workflow Engineering",
+    "audience": "Software engineers, AI workflow architects, technical founders, GEO/SEO practitioners, and online commerce operators",
+    "language": "en",
+    "languages": ["en", "zh-CN"],
+    "license": "MIT (code) / CC BY-SA 4.0 (documentation)"
+  },
+  "publisher": {
+    "name": "qq136692547-cmyk",
+    "type": "Organization",
+    "url": "https://qq136692547-cmyk.github.io/",
+    "about_url": "https://qq136692547-cmyk.github.io/about.html",
+    "github": "https://github.com/qq136692547-cmyk"
+  },
+  "flagship_projects": [
+    {
+      "name": "antigravity-aistudio",
+      "version": "0.2.2",
+      "stack": "Python / Antigravity Plugin",
+      "tests": "269/269 passing",
+      "summary": "Pure Gemini 4 cloud offloading and workflow automation for Google AI Studio via Antigravity browser subagent with 1M context and Thinking High+ enforcement.",
+      "url": "https://github.com/qq136692547-cmyk/antigravity-aistudio"
+    },
+    {
+      "name": "antigravity-flow",
+      "version": "0.3.2",
+      "stack": "Python / Antigravity Plugin",
+      "tests": "38/38 passing",
+      "summary": "Production-grade AI filmmaking and multimodal generation plugin for Google Flow featuring a Fail-Closed Credit Sniffer, Veo 3.1 and Omni 1.2 grammar, and a 60-credit single-action pool ceiling.",
+      "url": "https://github.com/qq136692547-cmyk/antigravity-flow"
+    },
+    {
+      "name": "geo-score",
+      "version": "1.9",
+      "stack": "JavaScript / Astro / Chrome MV3 / CLI / MCP",
+      "tests": "85+ checks across 11 dimensions",
+      "summary": "Open-source Generative Engine Optimization (GEO/AEO) audit suite with live web scanner, Chrome Extension v1.9, CLI, and MCP server.",
+      "url": "https://github.com/qq136692547-cmyk/geo-score",
+      "live_url": "https://geoscore.help/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "antigravity-flow",
+      "category": "AI & Gemini Plugins",
+      "url": "https://github.com/qq136692547-cmyk/antigravity-flow"
+    },
+    {
+      "name": "antigravity-aistudio",
+      "category": "AI & Gemini Plugins",
+      "url": "https://github.com/qq136692547-cmyk/antigravity-aistudio"
+    },
+    {
+      "name": "magpie-gemini-media-tools",
+      "category": "AI & Gemini Plugins",
+      "url": "https://github.com/qq136692547-cmyk/magpie-gemini-media-tools"
+    },
+    {
+      "name": "magpie-google-aistudio",
+      "category": "AI & Gemini Plugins",
+      "url": "https://github.com/qq136692547-cmyk/magpie-google-aistudio"
+    },
+    {
+      "name": "magpie-gemini-search",
+      "category": "AI & Gemini Plugins",
+      "url": "https://github.com/qq136692547-cmyk/magpie-gemini-search"
+    },
+    {
+      "name": "QuickNote",
+      "category": "Local-First Tools",
+      "url": "https://github.com/qq136692547-cmyk/QuickNote",
+      "live_url": "https://quicknote-official.pages.dev"
+    },
+    {
+      "name": "bookmark-health-master",
+      "category": "Local-First Tools",
+      "url": "https://github.com/qq136692547-cmyk/bookmark-health-master",
+      "live_url": "https://bhm-pro-ern.pages.dev/"
+    },
+    {
+      "name": "anan-devtools",
+      "category": "Local-First Tools",
+      "url": "https://github.com/qq136692547-cmyk/anan-devtools",
+      "live_url": "https://anan.zh.kg"
+    },
+    {
+      "name": "geo-score",
+      "category": "AI Search (GEO)",
+      "url": "https://github.com/qq136692547-cmyk/geo-score",
+      "live_url": "https://geoscore.help/"
+    },
+    {
+      "name": "deng-tts-tools",
+      "category": "Commerce & Finance",
+      "url": "https://github.com/qq136692547-cmyk/deng-tts-tools",
+      "live_url": "https://ttcalc.shop/"
+    },
+    {
+      "name": "fbatools-site",
+      "category": "Commerce & Finance",
+      "url": "https://github.com/qq136692547-cmyk/fbatools-site"
+    },
+    {
+      "name": "aikanpan-web",
+      "category": "Commerce & Finance",
+      "url": "https://github.com/qq136692547-cmyk/aikanpan-web",
+      "live_url": "https://aikanpan.top"
+    }
+  ],
+  "key_pages": [
+    {
+      "priority": 1.0,
+      "title": "qq136692547-cmyk Open-Source Hub",
+      "url": "https://qq136692547-cmyk.github.io/"
+    },
+    {
+      "priority": 0.8,
+      "title": "About & Author Credentials",
+      "url": "https://qq136692547-cmyk.github.io/about.html"
+    },
+    {
+      "priority": 0.6,
+      "title": "Privacy Policy",
+      "url": "https://qq136692547-cmyk.github.io/privacy.html"
+    },
+    {
+      "priority": 0.6,
+      "title": "Terms of Use",
+      "url": "https://qq136692547-cmyk.github.io/terms.html"
+    }
+  ],
+  "rate_limit": {
+    "policy": "1 request per 5 seconds (12 requests per minute)",
+    "x_ratelimit_guidance": "Respect upstream GitHub API X-RateLimit headers; static JSON/Markdown endpoints require no auth"
+  },
+  "last_updated": "2026-11-26",
+  "endpoints": {
+    "llms_txt": "https://qq136692547-cmyk.github.io/llms.txt",
+    "ai_txt": "https://qq136692547-cmyk.github.io/.well-known/ai.txt",
+    "summary_json": "https://qq136692547-cmyk.github.io/ai/summary.json",
+    "faq_json": "https://qq136692547-cmyk.github.io/ai/faq.json",
+    "sitemap": "https://qq136692547-cmyk.github.io/sitemap.xml",
+    "robots": "https://qq136692547-cmyk.github.io/robots.txt"
+  }
+}

@@ -1,0 +1,34 @@
+# qq136692547-cmyk Open-Source Hub
+
+> Independent open-source engineering lab and developer hub by qq136692547-cmyk, showcasing 12 source-available projects across Antigravity AI & Gemini plugins (antigravity-aistudio v0.2.2, antigravity-flow v0.3.2), local-first developer utilities, AI Search / GEO auditing (geo-score v1.9), and commerce analytics. Zero runtime dependencies and zero tracking telemetry.
+
+## Hub & Trust Pages
+
+- [Open-Source Hub Home](https://qq136692547-cmyk.github.io/): Main bilingual (EN / 中文) catalog of all 12 projects, comparison matrix, GEO benchmark case study, quickstart guide, and FAQ
+- [About & Author Credentials](https://qq136692547-cmyk.github.io/about.html): Maintainer background, engineering principles, project verification standards, and public contact channels
+- [Privacy Policy](https://qq136692547-cmyk.github.io/privacy.html): Zero-telemetry static hosting policy, client-side localStorage/sessionStorage usage, and GitHub API read-only star sync disclosure
+- [Terms of Use](https://qq136692547-cmyk.github.io/terms.html): Open-source MIT / CC BY-SA 4.0 licensing scope, third-party platform disclaimers, and citation attribution rules
+
+## Flagship & Core Projects
+
+- [antigravity-aistudio v0.2.2](https://github.com/qq136692547-cmyk/antigravity-aistudio): Pure Gemini 4 cloud offloading plugin for Google AI Studio via Antigravity browser subagent (1M context, Thinking High+, 269/269 tests passing)
+- [antigravity-flow v0.3.2](https://github.com/qq136692547-cmyk/antigravity-flow): Google Flow filmmaking & multimodal generation plugin featuring Fail-Closed Credit Sniffer, Veo 3.1 & Omni 1.2 grammar, and 60-credit ceiling (38/38 tests passing)
+- [geo-score v1.9](https://github.com/qq136692547-cmyk/geo-score): Open-source GEO/AEO audit platform (11 dimensions, 85 checks) with live web scanner at [geoscore.help](https://geoscore.help/), Chrome Extension v1.9, CLI, and MCP server
+- [magpie-gemini-media-tools](https://github.com/qq136692547-cmyk/magpie-gemini-media-tools): Multimodal MCP plugin exposing Nano Banana 2.1, Gemini Files API, and 3.8 TTS
+- [magpie-google-aistudio](https://github.com/qq136692547-cmyk/magpie-google-aistudio): Official API-key Google AI Studio model provider plugin for Magpie and OpenCode
+- [magpie-gemini-search](https://github.com/qq136692547-cmyk/magpie-gemini-search): Real-time web search plugin powered by Google Gemini Search Grounding
+- [QuickNote](https://github.com/qq136692547-cmyk/QuickNote): Offline-first Rust + Tauri developer scratchpad with 100% local SQLite vault ([quicknote-official.pages.dev](https://quicknote-official.pages.dev))
+- [bookmark-health-master](https://github.com/qq136692547-cmyk/bookmark-health-master): Local-first Chrome MV3 bookmark auditor with Dual-Stage DoH diagnostics and atomic undo ([bhm-pro-ern.pages.dev](https://bhm-pro-ern.pages.dev/))
+- [anan-devtools](https://github.com/qq136692547-cmyk/anan-devtools): Zero-tracking client-side suite of 21 developer utilities ([anan.zh.kg](https://anan.zh.kg))
+- [deng-tts-tools](https://github.com/qq136692547-cmyk/deng-tts-tools): TikTok Shop seller fee & profit suite ([ttcalc.shop](https://ttcalc.shop/))
+- [fbatools-site](https://github.com/qq136692547-cmyk/fbatools-site): Amazon FBA fee breakdown, margin, and ROI calculator
+- [aikanpan-web](https://github.com/qq136692547-cmyk/aikanpan-web): AI-powered equity market review and daily trading analytics ([aikanpan.top](https://aikanpan.top))
+
+## AI Discovery Endpoints & Crawl Rate-Limit Policy
+
+- [AI Policy (.well-known/ai.txt)](https://qq136692547-cmyk.github.io/.well-known/ai.txt): Machine-readable AI crawler permissions, attribution format, and license terms
+- [AI Summary JSON (/ai/summary.json)](https://qq136692547-cmyk.github.io/ai/summary.json): Structured JSON catalog of all 12 projects, key pages, and endpoint metadata
+- [AI FAQ JSON (/ai/faq.json)](https://qq136692547-cmyk.github.io/ai/faq.json): Structured Q&A pairs covering architecture, quota protection, and telemetry policy
+- [Robots Policy (/robots.txt)](https://qq136692547-cmyk.github.io/robots.txt): Explicit crawl allowances for 20 Tier 1-3 AI search and LLM bots
+- [XML Sitemap (/sitemap.xml)](https://qq136692547-cmyk.github.io/sitemap.xml): Canonical page index with lastmod timestamps
+- Crawl Rate Limit: Automated agents and crawlers should observe a polite rate limit of at most 1 request per 5 seconds (12 requests/minute; equivalent X-RateLimit budget for static CDN endpoints), cache JSON/Markdown discovery responses for at least 1 hour, and avoid automated stress bursts against GitHub Pages or upstream GitHub API endpoints.
